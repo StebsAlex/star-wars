@@ -1,0 +1,8 @@
+.card-holder{
+  display: flex;
+  margin: 10px 5%;
+}
+
+.player-card {
+  flex: 1 1 auto;
+}

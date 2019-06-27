@@ -1,0 +1,30 @@
+<h4> Hello this is the play component</h4>
+
+<div class="card-holder">
+  <div class="player-card">
+    <h4 class="player1"> Player 1 </h4>
+    <p class="player_name">{{player1.name}}</p>
+    <p class="player_mass">{{player1.mass}}</p>
+    <p class="player_url">{{player1.url}}</p>
+    <h2>{{winsPlayer1}}</h2>
+  </div>
+
+  <div class="player-card">
+    <h4 class="player"> Player 2 </h4>
+    <p class="player_name">{{player2.name}}</p>
+    <p class="player_mass">{{player2.mass}}</p>
+    <p class="player_url">{{player2.url}}</p>
+    <h2>{{winsPlayer2}}</h2>
+  </div>
+</div>
+
+<div class="winner">
+  Winner of the Last game is : {{winner}}
+</div>
+
+<div class="play-again">
+  <button {{action 'playAgain' preventDefault=false on="click"}}>
+    Play Again
+  </button>
+</div>
+{{yield}}
