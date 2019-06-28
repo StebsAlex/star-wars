@@ -17,7 +17,7 @@ export default DS.JSONSerializer.extend({
       }
     }));
 
-    console.log({data}, payload);
+    // console.log({data}, payload);
 
     return {data};
   }

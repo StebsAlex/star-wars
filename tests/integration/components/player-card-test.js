@@ -10,13 +10,6 @@ const player = EmberObject.create({
   name: 'Stebin',
   url: 'https://swapi.co/api/people/1/'
 });
-// const player2 = EmberObject.create({
-//   id: '2',
-//   mass: '74',
-//   name: 'StebinAlex',
-//   url: 'https://swapi.co/api/people/2/'
-// });
-
 module('Integration | Component | player-card', function (hooks) {
   setupRenderingTest(hooks);
 
@@ -24,7 +17,6 @@ module('Integration | Component | player-card', function (hooks) {
     this.set('name', 'people');
     this.set('player', player);
     await render(hbs`{{player-card player=player name=name}}`);
-    assert.async();
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
