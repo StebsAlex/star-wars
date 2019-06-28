@@ -1,0 +1,14 @@
+<div class="card-holder">
+  <div class="player-card">
+    <h4 class="player"> Player {{if player1 "1" "2"}} </h4>
+    <p class="player_name">Name: {{player.name}}</p>
+    {{#if (eq name "people")}}
+      <p class="player_mass">Mass: {{player.mass}}</p>
+    {{/if}}
+    {{#if (eq name "starship")}}
+      <p class="player_mass">Crew size: {{player.crew}}</p>
+    {{/if}}
+    <p class="player_url">Url: {{player.url}}</p>
+    <h2>{{winsPlayer2}}</h2>
+  </div>
+</div>

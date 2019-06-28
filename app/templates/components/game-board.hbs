@@ -1,39 +1,15 @@
 <h4> Hello this is the play component</h4>
 
 <div class="card-holder">
-  <div class="player-card">
-    <h4 class="player1"> Player 1 </h4>
-    <p class="player_name">Name : {{player1.name}}</p>
-    {{#if (eq name "people")}}
-      <p class="player_mass">Mass: {{player1.mass}}</p>
-    {{/if}}
-    {{#if (eq name "starship")}}
-      <p class="player_mass">Crew size: {{player1.crew}}</p>
-    {{/if}}
-    <p class="player_url">Url: {{player1.url}}</p>
-    <h2>{{winsPlayer1}}</h2>
-  </div>
-
-  <div class="player-card">
-    <h4 class="player"> Player 2 </h4>
-    <p class="player_name">Name: {{player2.name}}</p>
-    {{#if (eq name "people")}}
-      <p class="player_mass">Mass: {{player2.mass}}</p>
-    {{/if}}
-    {{#if (eq name "starship")}}
-      <p class="player_mass">Crew size: {{player2.crew}}</p>
-    {{/if}}
-    <p class="player_url">Url: {{player2.url}}</p>
-    <h2>{{winsPlayer2}}</h2>
-  </div>
+  {{player-card player=player1 name=name}}
+  {{player-card player=player2 name=name}}
 </div>
-
 <div class="winner">
   Winner of the Last game is : {{winner}}
 </div>
 
 <div class="play-again">
-  <button {{action 'playAgain' preventDefault=false on="click"}}>
+  <button {{action "playAgain" preventDefault=false on="click"}}>
     Play Again
   </button>
 </div>

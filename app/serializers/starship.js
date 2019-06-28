@@ -7,7 +7,6 @@ const getId = url => url
 
 export default DS.JSONSerializer.extend({
   normalizeArrayResponse(store, primaryModelClass, payload) {
-    console.log(payload)
     const data = payload.results.map(({crew, name, url}) => ({
       id: getId(url),
       type: 'starship',
@@ -18,7 +17,7 @@ export default DS.JSONSerializer.extend({
       }
     }));
 
-    console.log({data}, payload);
+    // console.log({data}, payload);
 
     return {data};
   }

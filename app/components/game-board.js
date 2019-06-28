@@ -11,10 +11,10 @@ export default Component.extend({
     this.startGame();
     if (this.get('model.modelName') === 'people') {
       this.set('name', 'people')
-      this.findWinnerPeople();
+      this.findWinnerProp('mass');
     } else {
       this.set('name', 'starship')
-      this.findWinnerStarship();
+      this.findWinnerProp('crew');
     }
   },
 
@@ -35,10 +35,10 @@ export default Component.extend({
     return availableItems.objectAt(randomIndex);
   },
 
-  findWinnerPeople(player1, player2) {
-    const player1Mass = parseInt(this.get('player1.mass'));
-    const player2Mass = parseInt(this.get('player2.mass'));
-    this.findWinner(player1Mass, player2Mass)
+  findWinnerProp(prop) {
+    const prop1 = parseInt(this.get(`player1.${prop}`));
+    const prop2 = parseInt(this.get(`player2.${prop}`));
+    this.findWinner(prop1, prop2)
   },
 
   findWinner(player1Mass, player2Mass) {
@@ -53,11 +53,6 @@ export default Component.extend({
     }
   },
 
-  findWinnerStarship(player1, player2) {
-    const player1Mass = parseInt(this.get('player1.crew'));
-    const player2Mass = parseInt(this.get('player2.crew'));
-    this.findWinner(player1Mass, player2Mass)
-  },
   actions: {
     playAgain() {
       this.init();
