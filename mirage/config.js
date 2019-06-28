@@ -1,5 +1,34 @@
 export default function () {
+  this.namespace = '/api';
+
+  this.get('/people', function () {
+    return {
+      count: 12,
+      next: 'www.bbc.co.uk',
+      previous: 'www.google.co.uk',
+      results: [{
+        name: 'Stebin Alex',
+        height: "173",
+        mass: "74",
+        url: "https://swapi.co/api/people/1/"
+      },
+      {
+        name: 'Robbo ',
+        height: "178",
+        mass: "80",
+        url: "https://swapi.co/api/people/2/"
+      },
+      {
+        name: 'Icy',
+        height: "165",
+        mass: "50",
+        url: "https://swapi.co/api/people/3/"
+      }
+      ]
+    }
+  })
 }
+
 // These comments are here to help you get started. Feel free to delete them.
 
 /*
