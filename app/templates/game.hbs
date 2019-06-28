@@ -1,0 +1,14 @@
+<h2>Welcome to the StarWars Api Game</h2>
+
+<h4>Do you want to play as Starship or People</h4>
+<div class="card-holder">
+  {{#link-to "people" class="player-card white"}}
+    People
+  {{/link-to}}
+</div>
+<div class="card-holder">
+  {{#link-to "starship" class="player-card white"}}
+    Starship
+  {{/link-to}}
+</div>
+{{outlet}}
