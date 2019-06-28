@@ -27,6 +27,32 @@ export default function () {
       ]
     }
   })
+  this.get('/starship', function () {
+    return {
+      count: 12,
+      next: 'www.bbc.co.uk',
+      previous: 'www.google.co.uk',
+      results: [{
+        name: 'Stebin Alex',
+        height: "173",
+        crew: "1000",
+        url: "https://swapi.co/api/starship/1/"
+      },
+      {
+        name: 'Robbo ',
+        height: "178",
+        crew: "80",
+        url: "https://swapi.co/api/starship/2/"
+      },
+      {
+        name: 'Icy',
+        height: "165",
+        crew: "50",
+        url: "https://swapi.co/api/starship/3/"
+      }
+      ]
+    }
+  })
 }
 
 // These comments are here to help you get started. Feel free to delete them.
